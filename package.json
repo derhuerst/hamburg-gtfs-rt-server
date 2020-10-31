@@ -1,0 +1,54 @@
+{
+	"private": true,
+	"name": "hamburg-gtfs-rt-server",
+	"description": "Expose Hamburg transit data as a GTFS-RT feed.",
+	"version": "1.0.0",
+	"main": "index.js",
+	"keywords": [
+		"hamburg",
+		"hvv",
+		"gtfs-rt",
+		"gtfs realtime",
+		"transit",
+		"public transport"
+	],
+	"author": "Jannis R <mail@jannisr.de>",
+	"homepage": "https://github.com/derhuerst/hamburg-gtfs-rt-server",
+	"repository": "derhuerst/hamburg-gtfs-rt-server",
+	"bugs": "https://github.com/derhuerst/hamburg-gtfs-rt-server/issues",
+	"license": "ISC",
+	"engines": {
+		"node": ">=12"
+	},
+	"dependencies": {
+		"@derhuerst/round-robin-scheduler": "^1.0.4",
+		"cors": "^2.8.5",
+		"debug": "^4.2.0",
+		"etag": "^1.8.1",
+		"gtfs-rt-differential-to-full-dataset": "^1.1.0",
+		"hafas-client": "^5.8.0",
+		"hafas-gtfs-rt-feed": "^3.0.0",
+		"hafas-monitor-trips": "^4.0.0",
+		"https-proxy-agent": "^5.0.0",
+		"live-moving-average": "^1.1.0",
+		"match-gtfs-rt-to-gtfs": "github:derhuerst/match-gtfs-rt-to-gtfs",
+		"ndjson": "^2.0.0",
+		"p-limit": "^3.0.2",
+		"pino": "^6.7.0",
+		"serve-buffer": "^2.0.0"
+	},
+	"devDependencies": {
+		"@derhuerst/technical-docs-cli": "^1.1.1",
+		"eslint": "^7.11.0",
+		"gtfs-via-postgres": "^2.2.0",
+		"parallel-stream": "^1.1.2"
+	},
+	"scripts": {
+		"start": "node monitor.js | node match.js | node serve.js",
+		"docs": "build-technical-doc <docs/readme.md >docs/index.html",
+		"lint": "eslint .",
+		"build": "./build.sh && npm run docs",
+		"test": "echo todo; exit 1",
+		"prepublishOnly": "npm run lint && npm run build && npm test"
+	}
+}
