@@ -83,4 +83,4 @@ createServer((req, res) => {
 		}
 	})
 })
-.listen(3000, onError)
+.listen(process.env.PORT || 3000, onError)

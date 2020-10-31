@@ -31,33 +31,33 @@ curl 'https://v0.hamburg-gtfs-rt.transport.rest/feed' -s | print-gtfs-rt --json 
 
 ```json
 {
-	"id": "10989100",
+	"id": "20510",
 	"is_deleted": false,
 	"trip_update": null,
 	"vehicle": {
 		"trip": {
-			"trip_id": "143651102",
-			"route_id": "17453_700",
+			"trip_id": "22227991",
+			"route_id": "9475_109",
 			"direction_id": 0,
 			"start_time": "",
 			"start_date": "",
 			"schedule_relationship": 0
 		},
 		"vehicle": {
-			"id": "m41",
-			"label": "U Hermannplatz",
+			"id": "s3",
+			"label": "Harburg Rathaus",
 			"license_plate": ""
 		},
 		"position": {
-			"latitude": 52.48768997192383,
-			"longitude": 13.42607307434082,
+			"latitude": 53.46302795410156,
+			"longitude": 9.97325325012207,
 			"bearing": 0,
 			"odometer": 0,
 			"speed": 0
 		},
 		"current_stop_sequence": 0,
-		"stop_id": "900000078105",
-		"current_status": 1,
+		"stop_id": "107580",
+		"current_status": 2,
 		"timestamp": 0,
 		"congestion_level": 0,
 		"occupancy_status": 0
