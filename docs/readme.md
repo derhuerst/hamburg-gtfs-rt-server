@@ -1,4 +1,4 @@
-# Inofficial [GTFS Realtime](https://gtfs.org/reference/realtime/v2/) feed for Hamburg
+# Unofficial [GTFS Realtime](https://gtfs.org/reference/realtime/v2/) feed for Hamburg
 
 **This endpoint provides realtime transit data for Hamburg in the [GTFS Realtime (GTFS-RT)](https://gtfs.org/reference/realtime/v2/) format.**
 
