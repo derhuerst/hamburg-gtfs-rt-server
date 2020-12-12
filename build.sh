@@ -20,4 +20,7 @@ NODE_ENV=production node_modules/.bin/gtfs-to-sql \
 	gtfs/trips.txt \
 	-d | psql -b
 
-NODE_ENV=production node_modules/.bin/build-gtfs-match-index | psql -b
+lib="$(dirname $(realpath $0))/lib"
+NODE_ENV=production node_modules/.bin/build-gtfs-match-index \
+	$lib/gtfs-rt-info.js $lib/gtfs-info.js \
+	| psql -b
