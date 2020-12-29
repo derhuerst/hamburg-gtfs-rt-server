@@ -3,6 +3,7 @@
 const createGtfsRtWriter = require('hafas-gtfs-rt-feed/writer')
 const differentialToFullDataset = require('gtfs-rt-differential-to-full-dataset')
 const computeEtag = require('etag')
+const {gzipSync, brotliCompressSync} = require('zlib')
 const serveBuffer = require('serve-buffer')
 const {pipeline} = require('stream')
 const {parse} = require('ndjson')

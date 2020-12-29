@@ -16,6 +16,7 @@ NODE_ENV=production node_modules/.bin/gtfs-to-sql \
 	gtfs/calendar_dates.txt \
 	gtfs/frequencies.txt \
 	gtfs/routes.txt \
+	gtfs/shapes.txt \
 	gtfs/stop_times.txt \
 	gtfs/stops.txt \
 	gtfs/transfers.txt \

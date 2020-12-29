@@ -53,10 +53,13 @@ pipeline(
 			logger.error(err)
 			process.exit(1)
 		}
+
+		reportStats()
 		clearInterval(statsInterval)
 	},
 )
 
-const statsInterval = setInterval(() => {
+const reportStats = () => {
 	logger.info(stats())
-}, 5000)
+}
+const statsInterval = setInterval(reportStats, 5000)
