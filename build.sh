@@ -5,7 +5,7 @@ set -o pipefail
 set -x
 
 # todo: find a URL that always points to the latest dataset
-wget -O gtfs.zip 'http://daten.transparenz.hamburg.de/Dataport.HmbTG.ZS.Webservice.GetRessource100/GetRessource100.svc/daf903e6-d3f9-4ce7-8880-d11f7252ae30/Upload__HVV_Rohdaten_GTFS_Fpl_20210204.zip'
+wget -O gtfs.zip 'http://daten.transparenz.hamburg.de/Dataport.HmbTG.ZS.Webservice.GetRessource100/GetRessource100.svc/612d5372-3d2e-4447-b8af-8e49c0f92f77/Upload__HVV_Rohdaten_GTFS_Fpl_20210304.zip'
 unzip -o -d gtfs -j gtfs.zip
 
 env | grep '^PG'
