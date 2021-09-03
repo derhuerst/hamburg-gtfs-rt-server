@@ -22,7 +22,7 @@ It also needs access to a [NATS Streaming](https://docs.nats.io/nats-streaming-c
 ```shell
 git clone https://github.com/derhuerst/hamburg-gtfs-rt-server.git
 cd hamburg-gtfs-rt-server
-npm install --production
+npm install
 ```
 
 ### Building the matching index
@@ -41,7 +41,7 @@ Specify the bounding box to be observed as JSON:
 export BBOX='{"north": 53.6744, "west": 9.7559, "south": 53.3660, "east": 10.2909}'
 ```
 
-`hamburg-gtfs-rt-server` uses `hafas-gtfs-rt-feed` underneath, which is split into three parts: polling the HAFAS endpoint (`monitor-hafas` CLI), matching realtime data (`match-with-gtf` CLI), and serving a GTFS-RT feed (`serve-as-gtfs-rt` CLI). You can run all three at once using the `start.sh` wrapper script:
+`hamburg-gtfs-rt-server` uses [`hafas-gtfs-rt-feed`](https://github.com/derhuerst/hafas-gtfs-rt-feed) underneath, which is split into three parts: polling the HAFAS endpoint (`monitor-hafas` CLI), matching realtime data (`match-with-gtfs` CLI), and serving a GTFS-RT feed (`serve-as-gtfs-rt` CLI). You can run all three at once using the `start.sh` wrapper script:
 
 ```shell
 ./start.sh
