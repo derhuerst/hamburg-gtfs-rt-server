@@ -17,7 +17,7 @@ This project uses [`hafas-client`](https://github.com/public-transport/hafas-cli
 
 It also needs access to a [PostgreSQL](https://www.postgresql.org) 12+ server; Pass custom [`PG*` environment variables](https://www.postgresql.org/docs/12/libpq-envars.html) if you run PostgreSQL in an unusual configuration.
 
-It also needs access to a [NATS Streaming](https://docs.nats.io/nats-streaming-concepts/intro) server (just follow its [setup guide](https://docs.nats.io/nats-streaming-server/run)); Set the `NATS_URL` environment variable if you run it in an unusual configuration.
+It also needs access to a [NATS Streaming](https://docs.nats.io/nats-streaming-concepts/intro) server (just follow its [setup guide](https://docs.nats.io/nats-streaming-server/run)); Set the `NATS_STREAMING_URL` environment variable if you run it in an unusual configuration.
 
 ```shell
 git clone https://github.com/derhuerst/hamburg-gtfs-rt-server.git
@@ -48,6 +48,20 @@ export BBOX='{"north": 53.6744, "west": 9.7559, "south": 53.3660, "east": 10.290
 ```
 
 In production, run all three using a tool like [`systemctl`](https://www.digitalocean.com/community/tutorials/how-to-use-systemctl-to-manage-systemd-services-and-units), [`forever`](https://github.com/foreversd/forever#readme) or [Kubernetes](https://kubernetes.io) that restarts them when they crash.
+
+### via Docker
+
+A Docker image [is available as `derhuerst/hamburg-gtfs-rt-server`](https://hub.docker.com/r/derhuerst/hamburg-gtfs-rt-server).
+
+*Note:* The Docker image *does not* contain Redis, PostgreSQL & NATS. You need to configure access to them using the environment variables documented above (e.g. `NATS_STREAMING_URL`).
+
+```shell
+export BBOX='{"north": 53.6744, "west": 9.7559, "south": 53.3660, "east": 10.2909}'
+# build the matching index
+docker run -e BBOX -i -t --rm derhuerst/hamburg-gtfs-rt-server ./build.sh
+# run
+docker run -e BBOX -i -t --rm derhuerst/hamburg-gtfs-rt-server
+```
 
 
 ## License
