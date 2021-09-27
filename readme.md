@@ -58,4 +58,4 @@ This project is dual-licensed: **My contributions are licensed under the [*Prosp
 
 > Personal use for research, experiment, and testing for the benefit of public knowledge, personal study, private entertainment, hobby projects, amateur pursuits, or religious observance, without any anticipated commercial application, doesn’t count as use for a commercial purpose.
 
-~~[Buy a commercial license](https://licensezero.com/offers/todo) or~~ read more about [why I sell private licenses for my projects](https://gist.github.com/derhuerst/0ef31ee82b6300d2cafd03d10dd522f7).
+[Buy a commercial license](https://licensezero.com/offers/da2cc40d-42ac-403a-8654-234f088acbe2) or read more about [why I sell private licenses for my projects](https://gist.github.com/derhuerst/0ef31ee82b6300d2cafd03d10dd522f7).
