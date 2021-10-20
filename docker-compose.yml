@@ -1,0 +1,28 @@
+version: "3.9"
+services:
+  hamburg-gtfs-rt-server:
+    build: .
+    environment:
+      ENV BBOX: '{"north": 53.9645, "west": 9.7, "south": 53.39, "east": 10.33}'
+      NATS_STREAMING_URL: http://nats-streaming:4222/
+      REDIS_URL: http://redis:6379/
+      PGHOST: db
+      PGUSER: postgres
+      PGPASSWORD: $POSTGRES_PASSWORD
+    depends_on:
+      - nats-streaming
+      - redis
+      - db
+    ports:
+      - "3000:3000"
+  nats-streaming:
+    image: nats-streaming
+  redis:
+    image: redis
+  db:
+    hostname: db
+    image: postgis/postgis
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: $POSTGRES_PASSWORD
+
