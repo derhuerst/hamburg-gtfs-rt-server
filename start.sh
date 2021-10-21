@@ -16,14 +16,8 @@ until psql -c '\q'; do
 done
 >&2 echo "Postgres is up - continuing"
 
->&2 echo "Checking if GTFS was already imported..."
-if [[ $(psql -t -c 'SELECT 1 FROM agency LIMIT 1') ]]
-then
-    >&2 echo "GTFS data already imported, skipping build.sh"
-else
-    >&2 echo "No GTFS data imported in database, running build.sh ..."
-    ./build.sh
-fi
+# Download and import GTFS data (in case it was not imported before)
+./build.sh
 
 NODE_ENV=production node_modules/.bin/monitor-hafas \
 	$lib/hafas.js \
