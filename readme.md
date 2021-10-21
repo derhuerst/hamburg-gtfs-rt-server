@@ -11,6 +11,8 @@ This project uses [`hafas-client`](https://github.com/public-transport/hafas-cli
 
 ## Installing & running
 
+*Note*: [`hafas-gtfs-rt-feed`](https://github.com/derhuerst/hafas-gtfs-rt-feed), the library used by this project for convert for building the GTFS-RT feed, has more extensive docs. For brevity and to avoid duplication (with e.g. [`berlin-gtfs-rt-server`](https://github.com/derhuerst/berlin-gtfs-rt-server)), the following instructions just cover the basics.
+
 ### Prerequisites
 
 `hamburg-gtfs-rt-server` needs access to a [Redis](https://redis.io/) server, you can configure a custom host/port by setting the `REDIS_URL` environment variable.
@@ -62,6 +64,14 @@ docker run -e BBOX -i -t --rm derhuerst/hamburg-gtfs-rt-server ./build.sh
 # run
 docker run -e BBOX -i -t --rm derhuerst/hamburg-gtfs-rt-server
 ```
+
+### inspecting the feed
+
+Check out [`hafas-gtfs-rt-feed`'s *inspecting the feed* section](https://github.com/derhuerst/hafas-gtfs-rt-feed/blob/master/readme.md#inspecting-the-feed).
+
+### metrics
+
+Check out [`hafas-gtfs-rt-feed`'s *metrics* section](https://github.com/derhuerst/hafas-gtfs-rt-feed/blob/master/readme.md#metrics).
 
 
 ## License
