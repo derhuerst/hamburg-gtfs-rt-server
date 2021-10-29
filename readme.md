@@ -65,6 +65,21 @@ docker run -e BBOX -i -t --rm derhuerst/hamburg-gtfs-rt-server ./build.sh
 docker run -e BBOX -i -t --rm derhuerst/hamburg-gtfs-rt-server
 ```
 
+### via docker-compose
+The example `docker-compose.yml`starts up a complete set of containers (hamburg-gtfs-rt-server, redis, postgis, nats-streaming) to generate a gtfs-rt feed for hvv.
+
+Be sure to set POSTGRES_PASSWORD, either via a .env file or environment variable.
+
+The environment may be started via 
+
+```sh
+$ POSTGRES_PASSWORD=mySecretPassword docker-compose up -d 
+```
+
+After starting, the GTFS-RT feed should be available via `http://localhost:3000/`.
+
+Note: Currently, [`build.sh`](build.sh) hard-codes the URL of the GTFS feed used for matching HAFAS realtime information, because [Hamburg's transparency portal doesn't provide a permanent URL for the latest dataset yet](https://suche.transparenz.hamburg.de/?q=gtfs&esq_not_all_versions=true&esq_not_all_versions=true&sort=publishing_date+desc%2Ctitle_sort+asc&esq_not_all_versions=true). You should check if a newer version is available and possibly update the url.
+
 ### inspecting the feed
 
 Check out [`hafas-gtfs-rt-feed`'s *inspecting the feed* section](https://github.com/derhuerst/hafas-gtfs-rt-feed/blob/master/readme.md#inspecting-the-feed).
