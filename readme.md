@@ -11,6 +11,8 @@ This project uses [`hafas-client`](https://github.com/public-transport/hafas-cli
 
 ## Installing & running
 
+*Note*: [`hafas-gtfs-rt-feed`](https://github.com/derhuerst/hafas-gtfs-rt-feed), the library used by this project for convert for building the GTFS-RT feed, has more extensive docs. For brevity and to avoid duplication (with e.g. [`berlin-gtfs-rt-server`](https://github.com/derhuerst/berlin-gtfs-rt-server)), the following instructions just cover the basics.
+
 ### Prerequisites
 
 `hamburg-gtfs-rt-server` needs access to a [Redis](https://redis.io/) server, you can configure a custom host/port by setting the `REDIS_URL` environment variable.
@@ -77,6 +79,15 @@ $ POSTGRES_PASSWORD=mySecretPassword docker-compose up -d
 After starting, the GTFS-RT feed should be available via `http://localhost:3000/`.
 
 Note: Currently, [`build.sh`](build.sh) hard-codes the URL of the GTFS feed used for matching HAFAS realtime information, because [Hamburg's transparency portal doesn't provide a permanent URL for the latest dataset yet](https://suche.transparenz.hamburg.de/?q=gtfs&esq_not_all_versions=true&esq_not_all_versions=true&sort=publishing_date+desc%2Ctitle_sort+asc&esq_not_all_versions=true). You should check if a newer version is available and possibly update the url.
+
+### inspecting the feed
+
+Check out [`hafas-gtfs-rt-feed`'s *inspecting the feed* section](https://github.com/derhuerst/hafas-gtfs-rt-feed/blob/master/readme.md#inspecting-the-feed).
+
+### metrics
+
+Check out [`hafas-gtfs-rt-feed`'s *metrics* section](https://github.com/derhuerst/hafas-gtfs-rt-feed/blob/master/readme.md#metrics).
+
 
 ## License
 
