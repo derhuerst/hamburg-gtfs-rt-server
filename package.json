@@ -39,7 +39,8 @@
 		"hafas-client": "^5.16.0",
 		"hafas-gtfs-rt-feed": "^5.0.0",
 		"ioredis": "^4.26.0",
-		"slugg": "^1.2.1"
+		"slugg": "^1.2.1",
+		"normalize-for-search": "^2.1.0"
 	},
 	"devDependencies": {
 		"@derhuerst/technical-docs-cli": "^1.2.0",
