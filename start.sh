@@ -34,6 +34,7 @@ NODE_ENV=production node_modules/.bin/match-with-gtfs \
 
 NODE_ENV=production node_modules/.bin/serve-as-gtfs-rt \
   --signal-demand \
+  --static-feed-url 'https://daten.transparenz.hamburg.de/Dataport.HmbTG.ZS.Webservice.GetRessource100/GetRessource100.svc/dd3598e4-866f-446a-babf-1c567ca2ed6f/Upload__HVV_Rohdaten_GTFS_Fpl_20220112.zip' \
 	&
 
 wait || exit 1 # fail if any child failed
