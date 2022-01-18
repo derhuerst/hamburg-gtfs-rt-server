@@ -2,7 +2,7 @@
 
 **This endpoint provides realtime transit data for Hamburg in the [GTFS Realtime (GTFS-RT)](https://gtfs.org/reference/realtime/v2/) format.**
 
-[![API status](https://badgen.net/uptime-robot/status/m786241281-20b657adafa29b96eef65372)](https://stats.uptimerobot.com/57wNLs39M/786241281)
+[![API status](https://badgen.net/uptime-robot/status/m786507557-b4071f8f1fa8a0f09aa06c82)](https://stats.uptimerobot.com/57wNLs39M/786507557)
 
 <iframe id="inspector" title="gtfs-rt-inspector showing this feed" loading="lazy" src="https://public-transport.github.io/gtfs-rt-inspector/?feedUrl=https%3A%2F%2Fv0.hamburg-gtfs-rt.transport.rest%2Ffeed&feedSyncStopped=true" style="width: 100%; height: 50vh; min-height: 20em; border: 1px solid #333; box-sizing: border-box"></iframe>
 
