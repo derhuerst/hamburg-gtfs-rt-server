@@ -24,6 +24,7 @@ trap 'exit_code=$?; kill -- $(jobs -p); exit $exit_code' SIGINT SIGTERM EXIT
 ./build.sh
 
 NODE_ENV=production node_modules/.bin/monitor-hafas \
+  --trips-fetch-mode on-demand \
 	$lib/hafas.js \
 	&
 
@@ -32,6 +33,7 @@ NODE_ENV=production node_modules/.bin/match-with-gtfs \
 	&
 
 NODE_ENV=production node_modules/.bin/serve-as-gtfs-rt \
+  --signal-demand \
 	&
 
 wait || exit 1 # fail if any child failed
