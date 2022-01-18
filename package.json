@@ -2,7 +2,7 @@
 	"private": true,
 	"name": "hamburg-gtfs-rt-server",
 	"description": "Expose Hamburg transit data as a GTFS-RT feed.",
-	"version": "2.0.1",
+	"version": "3.0.0",
 	"main": "index.js",
 	"keywords": [
 		"hamburg",
@@ -32,12 +32,12 @@
 		}
 	],
 	"engines": {
-		"node": ">=14"
+		"node": ">=16"
 	},
 	"dependencies": {
 		"cached-hafas-client": "^4.0.0",
 		"hafas-client": "^5.16.0",
-		"hafas-gtfs-rt-feed": "^5.0.0",
+		"hafas-gtfs-rt-feed": "^7.1.0",
 		"ioredis": "^4.26.0",
 		"slugg": "^1.2.1",
 		"tokenize-vbb-station-name": "^1.1.0"
