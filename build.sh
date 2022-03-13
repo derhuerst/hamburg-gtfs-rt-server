@@ -12,7 +12,7 @@ then
 fi
 
 # todo: find a URL that always points to the latest dataset
-wget -O gtfs.zip 'https://daten.transparenz.hamburg.de/Dataport.HmbTG.ZS.Webservice.GetRessource100/GetRessource100.svc/dd3598e4-866f-446a-babf-1c567ca2ed6f/Upload__HVV_Rohdaten_GTFS_Fpl_20220112.zip'
+wget -O gtfs.zip 'https://daten.transparenz.hamburg.de/Dataport.HmbTG.ZS.Webservice.GetRessource100/GetRessource100.svc/de3c4873-c92d-4f64-b98d-13183f6e027b/Upload__HVV_Rohdaten_GTFS_Fpl_20220304.zip'
 unzip -o -d gtfs -j gtfs.zip
 
 env | grep '^PG'
