@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 set -e
 set -o pipefail
@@ -37,4 +37,6 @@ NODE_ENV=production node_modules/.bin/serve-as-gtfs-rt \
   --static-feed-url 'https://daten.transparenz.hamburg.de/Dataport.HmbTG.ZS.Webservice.GetRessource100/GetRessource100.svc/dd3598e4-866f-446a-babf-1c567ca2ed6f/Upload__HVV_Rohdaten_GTFS_Fpl_20220112.zip' \
 	&
 
-wait || exit 1 # fail if any child failed
+# fail if any child process failed, running into the trap above
+# Note: `wait` (without any flags) waits for *all* child processes to finish. Bash 5.0 introduced `wait -n`, which only waits until *one* job has exited. macOS bundles bash 3.2. 🙄
+wait -n || exit 1
