@@ -16,7 +16,7 @@ wget -O gtfs.zip 'https://daten.transparenz.hamburg.de/Dataport.HmbTG.ZS.Webserv
 rm gtfs/* || true
 unzip -o -d gtfs -j gtfs.zip
 
-env | grep '^PG'
+env | grep '^PG' || true
 
 NODE_ENV=production node_modules/.bin/gtfs-to-sql -d --trips-without-shape-id --routes-without-agency-id -- \
 	gtfs/agency.txt \

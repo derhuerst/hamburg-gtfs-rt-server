@@ -2,7 +2,7 @@
 
 Contributor: Jannis R
 
-Source Code: https://github.com/derhuerst/hafas-gtfs-rt-feed
+Source Code: https://github.com/derhuerst/hamburg-gtfs-rt-server
 
 ## Purpose
 
