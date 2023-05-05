@@ -1,6 +1,12 @@
 # hamburg-gtfs-rt-server
 
-**Poll the [HVV](https://en.wikipedia.org/wiki/Hamburger_Verkehrsverbund) [HAFAS endpoint](https://github.com/public-transport/hafas-client/tree/5/p/hvv) to provide a [GTFS Realtime (GTFS-RT)](https://gtfs.org/reference/realtime/v2/) feed for Hamburg.**
+**Deprecated. The HVV HAFAS API has been shut off.**
+
+If you happen to port the code to [Geofox's `getVehicleMap` API](https://web.archive.org/web/20230505124929/https://gti.geofox.de/html/GTIHandbuch_p.html#x1-720002.11), or know of anyone else who has done it, please let me know!
+
+---
+
+Poll the [HVV](https://en.wikipedia.org/wiki/Hamburger_Verkehrsverbund) [HAFAS endpoint](https://github.com/public-transport/hafas-client/tree/5/p/hvv) to provide a [GTFS Realtime (GTFS-RT)](https://gtfs.org/reference/realtime/v2/) feed for Hamburg.
 
 [![Prosperity/Apache license](https://img.shields.io/static/v1?label=license&message=Prosperity%2FApache&color=0997E8)](#license)
 [![support me via GitHub Sponsors](https://img.shields.io/badge/support%20me-donate-fa7664.svg)](https://github.com/sponsors/derhuerst)
